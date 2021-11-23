@@ -244,29 +244,40 @@ h4 {
   bottom: 0; }
 
 .sidebar {
-  grid-row: 1/7;
-  grid-column: 1/2;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 23rem;
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  padding: 1rem;
-  transition: all 0.2s ease-in-out; }
-  @media only screen and (max-width: 50em) {
+  padding: 1rem; }
+  @media only screen and (max-width: 62.5em) {
     .sidebar {
       position: absolute;
+      top: 0px;
+      left: 0px;
       width: 100vw;
       z-index: 500;
       height: 100%;
       padding: 3rem; } }
-  @media only screen and (max-width: 28em) {
-    .sidebar {
-      width: 100vw;
-      padding: 6rem; } }
+
+.sidebar-container {
+  grid-row: 1/7;
+  grid-column: 1/2;
+  height: 100%; }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar-container {
+      display: none; } }
 
 .sidebar h2:first-of-type {
   margin-top: 3rem; }
+
+.gridfiller {
+  grid-row: 1/7;
+  grid-column: 1/2;
+  background-color: white;
+  height: 100%;
+  width: 23rem; }
 
 .sidebar ul li {
   list-style-type: none;
@@ -351,14 +362,6 @@ h4 {
 
 .icon:hover {
   fill: darkgrey; }
-
-.sidebar-container {
-  grid-row: 1/7;
-  grid-column: 1/2;
-  height: 100%; }
-  @media only screen and (max-width: 50em) {
-    .sidebar-container {
-      display: none; } }
 
 .block {
   display: block; }
@@ -492,7 +495,7 @@ h4 {
   @media only screen and (max-width: 50em) {
     .nav-bar__link {
       grid-column: 4/5; } }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (max-width: 75em) {
     .nav-bar {
       grid-template-columns: 5vw 18vw 1fr 18vw 5vw; } }
   .nav-bar__title {
@@ -500,7 +503,7 @@ h4 {
     margin-right: auto;
     align-self: center;
     font-size: 1.6rem; }
-    @media only screen and (max-width: 50em) {
+    @media only screen and (max-width: 75em) {
       .nav-bar__title {
         display: none; } }
     @media only screen and (max-width: 37.5em) {
@@ -521,11 +524,14 @@ h4 {
       .nav-bar__title-page-main {
         line-height: 2.4rem;
         text-align: center; }
+        @media only screen and (max-width: 50em) {
+          .nav-bar__title-page-main {
+            display: none; } }
       .nav-bar__title-page-deco {
         height: 4rem;
         width: auto;
         margin: 0 2rem; }
-        @media only screen and (max-width: 37.5em) {
+        @media only screen and (max-width: 62.5em) {
           .nav-bar__title-page-deco {
             display: none; } }
   .nav-bar__logo-img {
@@ -547,7 +553,7 @@ h4 {
     text-decoration: none; }
     .nav-bar__link:hover {
       color: #ffe164; }
-    @media only screen and (max-width: 50em) {
+    @media only screen and (max-width: 62.5em) {
       .nav-bar__link.link2, .nav-bar__link.link3 {
         display: none; } }
 
@@ -556,7 +562,7 @@ h4 {
   align-self: center;
   cursor: pointer;
   display: none; }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (max-width: 62.5em) {
     .menu {
       display: block; } }
   .menu:hover {
@@ -577,28 +583,20 @@ h4 {
   justify-content: space-evenly;
   border-radius: 5px;
   box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1); }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 75em) {
     .introduction {
       width: 600px; } }
   @media only screen and (max-width: 37.5em) {
     .introduction {
-      grid-row: 3/4;
-      justify-content: center;
-      width: 400px;
-      flex-direction: column; } }
-  @media only screen and (max-width: 37.5em) {
-    .introduction {
       grid-row: 2/3;
       justify-content: center;
-      width: 360px;
-      height: 550px;
+      width: 320px;
       flex-direction: column; } }
   @media only screen and (max-width: 20em) {
     .introduction {
       grid-row: 2/3;
       justify-content: center;
       width: 310px;
-      height: 550px;
       flex-direction: column; } }
   .introduction a {
     display: inline;
@@ -681,15 +679,15 @@ h4 {
   @media only screen and (max-width: 75em) {
     .wrapper {
       width: 100vw; } }
+  @media only screen and (max-width: 75em) {
+    .wrapper {
+      width: 100vw;
+      box-shadow: none; } }
   @media only screen and (max-width: 62.5em) {
     .wrapper {
-      grid-template-columns: 28rem 1fr; } }
-  @media only screen and (max-width: 50em) {
-    .wrapper {
-      grid-template-columns: 0 1fr; } }
-  @media only screen and (max-width: 37.5em) {
-    .wrapper {
-      width: 100vw; } }
+      width: 100vw;
+      display: flex;
+      flex-direction: column; } }
 
 .main {
   grid-row: 3/4;
@@ -717,6 +715,10 @@ h4 {
   box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
   align-self: center;
   justify-self: center; }
+  @media only screen and (max-width: 75em) {
+    .overlay {
+      width: 600px;
+      height: 375px; } }
 
 .overlay .after {
   position: absolute;
@@ -808,18 +810,13 @@ h4 {
   background-color: #fff;
   justify-content: flex-start;
   box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1); }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 75em) {
     .links {
       width: 600px; } }
   @media only screen and (max-width: 37.5em) {
     .links {
       justify-content: center;
-      width: 360px; } }
-  @media only screen and (max-width: 37.5em) {
-    .links {
-      justify-content: center;
-      width: 310px;
-      height: 300px; } }
+      width: 320px; } }
   .links__text {
     margin-bottom: 3rem;
     color: #368cbf;

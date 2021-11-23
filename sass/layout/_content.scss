@@ -26,6 +26,11 @@
     box-shadow: $box-shadow-large;
     align-self: center;
     justify-self: center;
+
+    @media only screen and (max-width:$bp-largest) {
+        width: 600px;
+        height: 375px;
+    }
 }
 
 .overlay .after {
