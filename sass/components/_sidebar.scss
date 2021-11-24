@@ -1,33 +1,26 @@
 .sidebar {
   position: absolute;
   top: 0;
-  width: 23rem;
+  left: 0;
+  width: 1200px;
+  height: 100%;
   display: flex;
+  z-index: 500;
   flex-direction: column;
   background-color: #fff;
-  padding: 1rem;
+  padding: 3rem;
 
-  @media only screen and (max-width: $bp-large) {
-position: absolute;  
-top: 0px;
-left: 0px;
-width: 100vw;
-  z-index: 500;
-    height: 100%;
-    padding: 3rem;
-  }
-
-
+   @media only screen and (max-width:$bp-largest){
+      width: 100vw;
+    }
 }
 
 .sidebar-container {
   grid-row: 1/6;
   grid-column: 1/2;
   height: 100%;
+  display: none;
 
-  @media only screen and (max-width: $bp-large) {
-    display: none;
-  }
 }
 
 .sidebar h2:first-of-type {
@@ -35,11 +28,7 @@ width: 100vw;
 }
 
 .gridfiller {
-    grid-row: 1/7;
-    grid-column: 1/2;
-    background-color: white;
-    height: 100%;
-    width: 23rem;
+    display: none;
 }
 
 
