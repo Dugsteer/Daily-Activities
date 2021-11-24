@@ -240,6 +240,6 @@
               </script>
     </div>
 
-    <script src="script/daily-activity-flashcards.min.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
